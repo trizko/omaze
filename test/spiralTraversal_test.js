@@ -71,4 +71,27 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
   });
+
+  describe('removeRightColumn()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.removeRightColumn([[]]);
+      });
+    });
+    it('should return an empty matrix if given an empty matrix', function(){
+      var result = spiral.removeRightColumn(fixtures.removeRightColumn.emptyMatrix.inputValue);
+      var expected = fixtures.removeRightColumn.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return matrix with right column removed if given a 1xm matrix', function(){
+      var result = spiral.removeRightColumn(fixtures.removeRightColumn.oneRow.inputValue);
+      var expected = fixtures.removeRightColumn.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return matrix with right column removed if given a nxm matrix', function(){
+      var result = spiral.removeRightColumn(fixtures.removeRightColumn.manyRows.inputValue);
+      var expected = fixtures.removeRightColumn.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
 });

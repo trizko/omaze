@@ -60,4 +60,27 @@ fixtures.takeRightColumn.manyRows = {
   outputExpected: [3,6,9]
 }
 
+//fixtures for removeRightColumn tests
+fixtures.removeRightColumn = {};
+fixtures.removeRightColumn.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: [[]]
+}
+fixtures.removeRightColumn.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: [[1,2]]
+}
+fixtures.removeRightColumn.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [
+    [1,2],
+    [4,5],
+    [7,8]
+  ]
+}
+
 module.exports = fixtures;
