@@ -29,6 +29,9 @@ spiral.takeRightColumn = function(matrix){
 spiral.removeRightColumn = function(matrix){
   var resultMatrix = [];
 
+  //if only 1 column exists return empty array
+  if(matrix[0].length <= 1){ return []; }
+
   for(var i = 0; i < matrix.length; i++){
     var lastElementIndex = matrix[i].length - 1;
     if(lastElementIndex !== -1){
