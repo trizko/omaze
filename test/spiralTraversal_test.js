@@ -25,4 +25,26 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
   });
+  describe('removeTopRow()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.removeTopRow([[]]);
+      });
+    });
+    it('should return an empty array if given an empty matrix', function(){
+      var result = spiral.removeTopRow(fixtures.removeTopRow.emptyMatrix.inputValue);
+      var expected = fixtures.removeTopRow.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return empty array if given a 1xm matrix', function(){
+      var result = spiral.removeTopRow(fixtures.removeTopRow.oneRow.inputValue);
+      var expected = fixtures.removeTopRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with top removed if given a nxm matrix', function(){
+      var result = spiral.removeTopRow(fixtures.removeTopRow.manyRows.inputValue);
+      var expected = fixtures.removeTopRow.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
 });

@@ -14,9 +14,31 @@ fixtures.takeTopRow.manyRows = {
   inputValue: [
     [1,2,3],
     [4,5,6],
-    [7,8,9] 
+    [7,8,9]
   ],
   outputExpected: [1,2,3]
+}
+
+//fixtures for removeTopRow tests
+fixtures.removeTopRow = {};
+fixtures.removeTopRow.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: []
+}
+fixtures.removeTopRow.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: []
+}
+fixtures.removeTopRow.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [
+    [4,5,6],
+    [7,8,9]
+  ]
 }
 
 module.exports = fixtures;
