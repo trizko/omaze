@@ -1,7 +1,7 @@
 var spiral = {};
 
 spiral.takeTopRow = function(matrix){
-  return 1;
+  return matrix[0];
 };
 
 module.exports = spiral;
