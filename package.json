@@ -1,0 +1,14 @@
+{
+  "name": "omaze-challenge",
+  "version": "1.0.0",
+  "description": "omaze backend test",
+  "main": "index.js",
+  "scripts": {
+    "test": "/node_modules/mocha/bin/mocha"
+  },
+  "author": "Tony Rizko",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
+}
