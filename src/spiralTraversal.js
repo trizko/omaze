@@ -26,4 +26,17 @@ spiral.takeRightColumn = function(matrix){
   return resultMatrix;
 }
 
+spiral.removeRightColumn = function(matrix){
+  var resultMatrix = [];
+
+  for(var i = 0; i < matrix.length; i++){
+    var lastElementIndex = matrix[i].length - 1;
+    if(lastElementIndex !== -1){
+      resultMatrix.push(matrix[i].slice(0, lastElementIndex));
+    }
+  }
+
+  return resultMatrix;
+};
+
 module.exports = spiral;

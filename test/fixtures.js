@@ -64,7 +64,7 @@ fixtures.takeRightColumn.manyRows = {
 fixtures.removeRightColumn = {};
 fixtures.removeRightColumn.emptyMatrix = {
   inputValue: [[]],
-  outputExpected: [[]]
+  outputExpected: []
 }
 fixtures.removeRightColumn.oneRow = {
   inputValue: [[1,2,3]],
