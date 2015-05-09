@@ -14,5 +14,10 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.takeTopRow.emptyMatrix.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return one array if given a 1xm matrix', function(){
+      var result = spiral.takeTopRow(fixtures.takeTopRow.oneRow.inputValue);
+      var expected = fixtures.takeTopRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
   });
 });
