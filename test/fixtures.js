@@ -6,9 +6,17 @@ fixtures.takeTopRow.emptyMatrix = {
   inputValue: [[]],
   outputExpected: []
 }
+fixtures.takeTopRow.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: [1]
+}
 fixtures.takeTopRow.oneRow = {
   inputValue: [[1,2,3]],
   outputExpected: [1,2,3]
+}
+fixtures.takeTopRow.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [1]
 }
 fixtures.takeTopRow.manyRows = {
   inputValue: [
@@ -25,9 +33,17 @@ fixtures.removeTopRow.emptyMatrix = {
   inputValue: [[]],
   outputExpected: []
 }
+fixtures.removeTopRow.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: []
+}
 fixtures.removeTopRow.oneRow = {
   inputValue: [[1,2,3]],
   outputExpected: []
+}
+fixtures.removeTopRow.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [[2],[3]]
 }
 fixtures.removeTopRow.manyRows = {
   inputValue: [
@@ -47,9 +63,17 @@ fixtures.takeRightColumn.emptyMatrix = {
   inputValue: [[]],
   outputExpected: []
 }
+fixtures.takeRightColumn.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: [1]
+}
 fixtures.takeRightColumn.oneRow = {
   inputValue: [[1,2,3]],
   outputExpected: [3]
+}
+fixtures.takeRightColumn.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [1,2,3]
 }
 fixtures.takeRightColumn.manyRows = {
   inputValue: [
@@ -66,9 +90,17 @@ fixtures.removeRightColumn.emptyMatrix = {
   inputValue: [[]],
   outputExpected: []
 }
+fixtures.removeRightColumn.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: []
+}
 fixtures.removeRightColumn.oneRow = {
   inputValue: [[1,2,3]],
   outputExpected: [[1,2]]
+}
+fixtures.removeRightColumn.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: []
 }
 fixtures.removeRightColumn.manyRows = {
   inputValue: [

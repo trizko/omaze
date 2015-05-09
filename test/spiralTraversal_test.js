@@ -14,9 +14,19 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.takeTopRow.emptyMatrix.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return one element array if given a 1x1 matrix', function(){
+      var result = spiral.takeTopRow(fixtures.takeTopRow.oneByOne.inputValue);
+      var expected = fixtures.takeTopRow.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
     it('should return one array if given a 1xm matrix', function(){
       var result = spiral.takeTopRow(fixtures.takeTopRow.oneRow.inputValue);
       var expected = fixtures.takeTopRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return an 1 length array if given a nx1 matrix', function(){
+      var result = spiral.takeTopRow(fixtures.takeTopRow.oneColumn.inputValue);
+      var expected = fixtures.takeTopRow.oneColumn.outputExpected;
       assert.deepEqual(result, expected);
     });
     it('should return one array if given a nxm matrix', function(){
@@ -37,9 +47,19 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.removeTopRow.emptyMatrix.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return empty array if given a 1x1 matrix', function(){
+      var result = spiral.removeTopRow(fixtures.removeTopRow.oneByOne.inputValue);
+      var expected = fixtures.removeTopRow.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
     it('should return empty array if given a 1xm matrix', function(){
       var result = spiral.removeTopRow(fixtures.removeTopRow.oneRow.inputValue);
       var expected = fixtures.removeTopRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return matrix with top row removed if given a nx1 matrix', function(){
+      var result = spiral.removeTopRow(fixtures.removeTopRow.oneColumn.inputValue);
+      var expected = fixtures.removeTopRow.oneColumn.outputExpected;
       assert.deepEqual(result, expected);
     });
     it('should return array with top removed if given a nxm matrix', function(){
@@ -60,9 +80,19 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.takeRightColumn.emptyMatrix.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return one element array if given a 1x1 matrix', function(){
+      var result = spiral.takeRightColumn(fixtures.takeRightColumn.oneByOne.inputValue);
+      var expected = fixtures.takeRightColumn.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
     it('should return one array if given a 1xm matrix', function(){
       var result = spiral.takeRightColumn(fixtures.takeRightColumn.oneRow.inputValue);
       var expected = fixtures.takeRightColumn.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return an n length array if given a nx1 matrix', function(){
+      var result = spiral.takeRightColumn(fixtures.takeRightColumn.oneColumn.inputValue);
+      var expected = fixtures.takeRightColumn.oneColumn.outputExpected;
       assert.deepEqual(result, expected);
     });
     it('should return one array if given a nxm matrix', function(){
@@ -83,9 +113,19 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.removeRightColumn.emptyMatrix.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return empty array if given a 1x1 matrix', function(){
+      var result = spiral.removeRightColumn(fixtures.removeRightColumn.oneByOne.inputValue);
+      var expected = fixtures.removeRightColumn.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
     it('should return matrix with right column removed if given a 1xm matrix', function(){
       var result = spiral.removeRightColumn(fixtures.removeRightColumn.oneRow.inputValue);
       var expected = fixtures.removeRightColumn.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return empty array if given a nx1 matrix', function(){
+      var result = spiral.removeRightColumn(fixtures.removeRightColumn.oneColumn.inputValue);
+      var expected = fixtures.removeRightColumn.oneColumn.outputExpected;
       assert.deepEqual(result, expected);
     });
     it('should return matrix with right column removed if given a nxm matrix', function(){
