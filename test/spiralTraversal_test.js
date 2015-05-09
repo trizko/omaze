@@ -25,6 +25,7 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
   });
+
   describe('removeTopRow()', function(){
     it('should exist', function(){
       assert.doesNotThrow(function(){
@@ -44,6 +45,29 @@ describe('Spiral Traversal', function(){
     it('should return array with top removed if given a nxm matrix', function(){
       var result = spiral.removeTopRow(fixtures.removeTopRow.manyRows.inputValue);
       var expected = fixtures.removeTopRow.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
+
+  describe('takeRightColumn()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.takeRightColumn([[]]);
+      });
+    });
+    it('should return an empty array if given an empty matrix', function(){
+      var result = spiral.takeRightColumn(fixtures.takeRightColumn.emptyMatrix.inputValue);
+      var expected = fixtures.takeRightColumn.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return one array if given a 1xm matrix', function(){
+      var result = spiral.takeRightColumn(fixtures.takeRightColumn.oneRow.inputValue);
+      var expected = fixtures.takeRightColumn.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return one array if given a nxm matrix', function(){
+      var result = spiral.takeRightColumn(fixtures.takeRightColumn.manyRows.inputValue);
+      var expected = fixtures.takeRightColumn.manyRows.outputExpected;
       assert.deepEqual(result, expected);
     });
   });
