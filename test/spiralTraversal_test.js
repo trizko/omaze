@@ -266,4 +266,42 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
   });
+
+  describe('traverseClockwise()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.traverseClockwise([[]]);
+      });
+    });
+    it('should return an empty array if given an empty matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.emptyMatrix.inputValue);
+      var expected = fixtures.traverseClockwise.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with 1 element if given a 1x1 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneByOne.inputValue);
+      var expected = fixtures.traverseClockwise.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 3 elements if given a 1x3 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneRow.inputValue);
+      var expected = fixtures.traverseClockwise.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 3 elements if given a 3x1 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneRow.inputValue);
+      var expected = fixtures.traverseClockwise.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 4 elements if given a 2x2 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneColumn.inputValue);
+      var expected = fixtures.traverseClockwise.oneColumn.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 9 elements if given a 3x3 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.manyRows.inputValue);
+      var expected = fixtures.traverseClockwise.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
 });
