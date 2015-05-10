@@ -134,4 +134,70 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
   });
+
+  describe('takeBottomRow()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.takeBottomRow([[]]);
+      });
+    });
+    it('should return an empty array if given an empty matrix', function(){
+      var result = spiral.takeBottomRow(fixtures.takeBottomRow.emptyMatrix.inputValue);
+      var expected = fixtures.takeBottomRow.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return one element array if given a 1x1 matrix', function(){
+      var result = spiral.takeBottomRow(fixtures.takeBottomRow.oneByOne.inputValue);
+      var expected = fixtures.takeBottomRow.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return one array if given a 1xm matrix', function(){
+      var result = spiral.takeBottomRow(fixtures.takeBottomRow.oneRow.inputValue);
+      var expected = fixtures.takeBottomRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return an 1 length array if given a nx1 matrix', function(){
+      var result = spiral.takeBottomRow(fixtures.takeBottomRow.oneColumn.inputValue);
+      var expected = fixtures.takeBottomRow.oneColumn.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return one array if given a nxm matrix', function(){
+      var result = spiral.takeBottomRow(fixtures.takeBottomRow.manyRows.inputValue);
+      var expected = fixtures.takeBottomRow.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
+
+  describe('removeBottomRow()', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        spiral.removeBottomRow([[]]);
+      });
+    });
+    it('should return an empty array if given an empty matrix', function(){
+      var result = spiral.removeBottomRow(fixtures.removeBottomRow.emptyMatrix.inputValue);
+      var expected = fixtures.removeBottomRow.emptyMatrix.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return empty array if given a 1x1 matrix', function(){
+      var result = spiral.removeBottomRow(fixtures.removeBottomRow.oneByOne.inputValue);
+      var expected = fixtures.removeBottomRow.oneByOne.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return empty array if given a 1xm matrix', function(){
+      var result = spiral.removeBottomRow(fixtures.removeBottomRow.oneRow.inputValue);
+      var expected = fixtures.removeBottomRow.oneRow.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return matrix with bottom row removed if given a nx1 matrix', function(){
+      var result = spiral.removeBottomRow(fixtures.removeBottomRow.oneColumn.inputValue);
+      var expected = fixtures.removeBottomRow.oneColumn.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with bottom removed if given a nxm matrix', function(){
+      var result = spiral.removeBottomRow(fixtures.removeBottomRow.manyRows.inputValue);
+      var expected = fixtures.removeBottomRow.manyRows.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+  });
 });

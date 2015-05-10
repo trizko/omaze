@@ -115,4 +115,61 @@ fixtures.removeRightColumn.manyRows = {
   ]
 }
 
+//fixtures for takeBottomRow tests
+fixtures.takeBottomRow = {};
+fixtures.takeBottomRow.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: []
+}
+fixtures.takeBottomRow.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: [1]
+}
+fixtures.takeBottomRow.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: [1,2,3]
+}
+fixtures.takeBottomRow.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [3]
+}
+fixtures.takeBottomRow.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [7,8,9]
+}
+
+//fixtures for removeTopRow tests
+fixtures.removeBottomRow = {};
+fixtures.removeBottomRow.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: []
+}
+fixtures.removeBottomRow.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: []
+}
+fixtures.removeBottomRow.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: []
+}
+fixtures.removeBottomRow.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [[1],[2]]
+}
+fixtures.removeBottomRow.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [
+    [1,2,3],
+    [4,5,6]
+  ]
+}
+
 module.exports = fixtures;
