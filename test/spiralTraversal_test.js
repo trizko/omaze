@@ -289,18 +289,18 @@ describe('Spiral Traversal', function(){
       assert.deepEqual(result, expected);
     });
     it('should return array with correct order and 3 elements if given a 3x1 matrix', function(){
-      var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneRow.inputValue);
-      var expected = fixtures.traverseClockwise.oneRow.outputExpected;
-      assert.deepEqual(result, expected);
-    });
-    it('should return array with correct order and 4 elements if given a 2x2 matrix', function(){
       var result = spiral.traverseClockwise(fixtures.traverseClockwise.oneColumn.inputValue);
       var expected = fixtures.traverseClockwise.oneColumn.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return array with correct order and 4 elements if given a 2x2 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.twoByTwo.inputValue);
+      var expected = fixtures.traverseClockwise.twoByTwo.outputExpected;
+      assert.deepEqual(result, expected);
+    });
     it('should return array with correct order and 9 elements if given a 3x3 matrix', function(){
-      var result = spiral.traverseClockwise(fixtures.traverseClockwise.manyRows.inputValue);
-      var expected = fixtures.traverseClockwise.manyRows.outputExpected;
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.threeByThree.inputValue);
+      var expected = fixtures.traverseClockwise.threeByThree.outputExpected;
       assert.deepEqual(result, expected);
     });
   });
