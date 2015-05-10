@@ -101,4 +101,25 @@ spiral.traverseClockwise = function(matrix){
   return resultArray;
 }
 
+spiral.traverseCounterClockwise = function(matrix){
+  resultArray = [];
+
+  while(matrix.length > 0){
+    resultArray = resultArray.concat(spiral.takeLeftColumn(matrix));
+    matrix = spiral.removeLeftColumn(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeBottomRow(matrix));
+    matrix = spiral.removeBottomRow(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeRightColumn(matrix).reverse());
+    matrix = spiral.removeRightColumn(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeTopRow(matrix).reverse());
+    matrix = spiral.removeTopRow(matrix);
+    if(matrix.length < 1) { continue; }
+  }
+
+  return resultArray;
+}
+
 module.exports = spiral;
