@@ -303,5 +303,20 @@ describe('Spiral Traversal', function(){
       var expected = fixtures.traverseClockwise.threeByThree.outputExpected;
       assert.deepEqual(result, expected);
     });
+    it('should return array with correct order and 9 elements if given a 3x4 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.threeByFour.inputValue);
+      var expected = fixtures.traverseClockwise.threeByFour.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 9 elements if given a 4x4 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.fourByFour.inputValue);
+      var expected = fixtures.traverseClockwise.fourByFour.outputExpected;
+      assert.deepEqual(result, expected);
+    });
+    it('should return array with correct order and 9 elements if given a 4x5 matrix', function(){
+      var result = spiral.traverseClockwise(fixtures.traverseClockwise.fourByFive.inputValue);
+      var expected = fixtures.traverseClockwise.fourByFive.outputExpected;
+      assert.deepEqual(result, expected);
+    });
   });
 });
