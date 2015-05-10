@@ -55,4 +55,29 @@ spiral.removeBottomRow = function(matrix){
   return resultMatrix;
 };
 
+spiral.takeLeftColumn = function(matrix){
+  var resultMatrix = [];
+
+  for(var i = 0; i < matrix.length; i++){
+    if(matrix[i].length > 0){
+      resultMatrix.push(matrix[i][0])
+    }
+  }
+
+  return resultMatrix;
+}
+
+spiral.removeLeftColumn = function(matrix){
+  var resultMatrix = [];
+
+  //if only 1 column exists return empty array
+  if(matrix[0].length <= 1){ return []; }
+
+  for(var i = 0; i < matrix.length; i++){
+    resultMatrix.push(matrix[i].slice(1));
+  }
+
+  return resultMatrix;
+};
+
 module.exports = spiral;
