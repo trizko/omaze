@@ -1,3 +1,12 @@
 var spiral = require('../src/fibonacci.js');
 var assert = require('assert');
-var fixtures = require('./fixtures.js')
+
+describe('Fibonacci', function(){
+  describe('fibRecursion', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        fibonacci.recursion(0);
+      });
+    });
+  });
+});
