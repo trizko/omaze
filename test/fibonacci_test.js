@@ -13,5 +13,15 @@ describe('Fibonacci', function(){
       var expected = 5;
       assert.equal(result, expected);
     });
+    it('should return 21 if given 8 as nth input', function(){
+      var result = fibonacci.recursion(8);
+      var expected = 21;
+      assert.equal(result, expected);
+    });
+    it('should return 144 if given 12 as nth input', function(){
+      var result = fibonacci.recursion(12);
+      var expected = 144;
+      assert.equal(result, expected);
+    });
   });
 });
