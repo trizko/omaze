@@ -142,7 +142,7 @@ fixtures.takeBottomRow.manyRows = {
   outputExpected: [7,8,9]
 }
 
-//fixtures for removeTopRow tests
+//fixtures for removeBottomRow tests
 fixtures.removeBottomRow = {};
 fixtures.removeBottomRow.emptyMatrix = {
   inputValue: [[]],
@@ -169,6 +169,64 @@ fixtures.removeBottomRow.manyRows = {
   outputExpected: [
     [1,2,3],
     [4,5,6]
+  ]
+}
+
+//fixtures for takeLeftColumn tests
+fixtures.takeLeftColumn = {};
+fixtures.takeLeftColumn.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: []
+}
+fixtures.takeLeftColumn.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: [1]
+}
+fixtures.takeLeftColumn.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: [1]
+}
+fixtures.takeLeftColumn.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: [1,2,3]
+}
+fixtures.takeLeftColumn.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [1,4,7]
+}
+
+//fixtures for removeLeftColumn tests
+fixtures.removeLeftColumn = {};
+fixtures.removeLeftColumn.emptyMatrix = {
+  inputValue: [[]],
+  outputExpected: []
+}
+fixtures.removeLeftColumn.oneByOne = {
+  inputValue: [[1]],
+  outputExpected: []
+}
+fixtures.removeLeftColumn.oneRow = {
+  inputValue: [[1,2,3]],
+  outputExpected: [[2,3]]
+}
+fixtures.removeLeftColumn.oneColumn = {
+  inputValue: [[1],[2],[3]],
+  outputExpected: []
+}
+fixtures.removeLeftColumn.manyRows = {
+  inputValue: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+  ],
+  outputExpected: [
+    [2,3],
+    [5,6],
+    [8,9]
   ]
 }
 
