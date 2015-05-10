@@ -42,4 +42,17 @@ spiral.removeRightColumn = function(matrix){
   return resultMatrix;
 };
 
+spiral.takeBottomRow = function(matrix){
+  return matrix[matrix.length - 1];
+};
+
+spiral.removeBottomRow = function(matrix){
+  var resultMatrix = [];
+  for(var i = 0; i < matrix.length - 1; i++){
+    resultMatrix.push(matrix[i]);
+  }
+
+  return resultMatrix;
+};
+
 module.exports = spiral;
