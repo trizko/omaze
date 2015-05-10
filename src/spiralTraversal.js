@@ -80,4 +80,25 @@ spiral.removeLeftColumn = function(matrix){
   return resultMatrix;
 };
 
+spiral.traverseClockwise = function(matrix){
+  resultArray = [];
+
+  while(matrix.length > 0){
+    resultArray = resultArray.concat(spiral.takeTopRow(matrix));
+    matrix = spiral.removeTopRow(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeRightColumn(matrix));
+    matrix = spiral.removeRightColumn(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeBottomRow(matrix).reverse());
+    matrix = spiral.removeBottomRow(matrix);
+    if(matrix.length < 1) { continue; }
+    resultArray = resultArray.concat(spiral.takeLeftColumn(matrix).reverse());
+    matrix = spiral.removeLeftColumn(matrix);
+    if(matrix.length < 1) { continue; }
+  }
+
+  return resultArray;
+}
+
 module.exports = spiral;
