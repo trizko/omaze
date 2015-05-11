@@ -85,4 +85,32 @@ describe('Minimum 24 hour clock angle', function(){
       assert.equal(result, expected);
     });
   });
+
+  describe('hourAngleFromOrigin', function(){
+    it('should exist', function(){
+      assert.doesNotThrow(function(){
+        minClockAngle.hourAngleFromOrigin("01:23");
+      });
+    });
+    it('should return 90.0 if given 6:00 as time string', function(){
+      var result = minClockAngle.hourAngleFromOrigin('6:00');
+      var expected = 90.0;
+      assert.equal(result, expected);
+    });
+    it('should return 94.25 if given 6:17 as time string', function(){
+      var result = minClockAngle.hourAngleFromOrigin('6:17');
+      var expected = 94.25;
+      assert.equal(result, expected);
+    });
+    it('should return 277.50 if given 18:30 as time string', function(){
+      var result = minClockAngle.hourAngleFromOrigin('18:30');
+      var expected = 277.50;
+      assert.equal(result, expected);
+    });
+    it('should return 270 if given 18:59 as time string', function(){
+      var result = minClockAngle.hourAngleFromOrigin('18:59');
+      var expected = 284.75;
+      assert.equal(result, expected);
+    });
+  });
 });
