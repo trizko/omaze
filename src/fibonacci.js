@@ -6,6 +6,28 @@ fibonacci.recursion = function(n){
   return fibonacci.recursion(n-1) + fibonacci.recursion(n-2);
 };
 
+fibonacci.recursionMemorized = function(n){
+  var memory = {};
+
+  return function recurse(n) {
+    var result;
+
+    if(n in memory){
+      result = memory[n];
+    } else {
+      if(n === 0 || n === 1){
+        result = n;
+      } else {
+        result = recurse(n - 1) + recurse(n - 2);
+      }
+
+      memory[n] = result;
+    }
+
+    return result;
+  }(n);
+};
+
 fibonacci.iterative = function(n){
   if(n === 0){ return 0 };
   if(n === 1){ return 1 };
