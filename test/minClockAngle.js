@@ -107,7 +107,7 @@ describe('Minimum 24 hour clock angle', function(){
       var expected = 277.50;
       assert.equal(result, expected);
     });
-    it('should return 270 if given 18:59 as time string', function(){
+    it('should return 284.75 if given 18:59 as time string', function(){
       var result = minClockAngle.hourAngleFromOrigin('18:59');
       var expected = 284.75;
       assert.equal(result, expected);
