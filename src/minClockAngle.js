@@ -16,4 +16,10 @@ minClockAngle.hourAngleFromOrigin = function(time){
   return (minClockAngle.parseHour(time)*15) + (minClockAngle.parseMinutes(time) * (0.25));
 };
 
+minClockAngle.getMinAngle = function(time){
+  var angle = Math.abs(minClockAngle.minuteAngleFromOrigin(time) -
+                       minClockAngle.hourAngleFromOrigin(time))
+  return angle > 180.0 ? 360 - angle : angle;
+};
+
 module.exports = minClockAngle;
