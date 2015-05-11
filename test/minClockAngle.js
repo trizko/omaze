@@ -1,4 +1,4 @@
-var fibonacci = require('../src/minClockAngle.js');
+var minClockAngle = require('../src/minClockAngle.js');
 var assert = require('assert');
 
 describe('Minimum 24 hour clock angle', function(){
