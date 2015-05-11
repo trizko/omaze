@@ -36,24 +36,24 @@ describe('Minimum 24 hour clock angle', function(){
         minClockAngle.parseMinutes("01:23");
       });
     });
-    it('should return 6 if given 6:00 as time string', function(){
+    it('should return 0 if given 6:00 as time string', function(){
       var result = minClockAngle.parseMinutes('6:00');
-      var expected = 6;
+      var expected = 0;
       assert.equal(result, expected);
     });
-    it('should return 6 if given 6:17 as time string', function(){
+    it('should return 17 if given 6:17 as time string', function(){
       var result = minClockAngle.parseMinutes('6:17');
-      var expected = 6;
+      var expected = 17;
       assert.equal(result, expected);
     });
-    it('should return 18 if given 18:00 as time string', function(){
+    it('should return 0 if given 18:00 as time string', function(){
       var result = minClockAngle.parseMinutes('18:00');
-      var expected = 18;
+      var expected = 0;
       assert.equal(result, expected);
     });
-    it('should return 18 if given 18:17 as time string', function(){
+    it('should return 17 if given 18:17 as time string', function(){
       var result = minClockAngle.parseMinutes('18:17');
-      var expected = 18;
+      var expected = 17;
       assert.equal(result, expected);
     });
   });
