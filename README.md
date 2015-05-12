@@ -1,3 +1,5 @@
+![BUILD STATUS](https://travis-ci.org/trizko/omaze.svg?branch=master)
+
 # omaze
 
 This is a challenge from the wonderful people at omaze.com
